@@ -1,14 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="output.css">
-    <link rel="shortcut icon" href="five.icon/five.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <link rel="shortc ut icon" href="five.icon/five.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <title>Lead page Advogado</title>
-</head>
-<body>
-    
-</body>
+  </head>
+
+  <style>
+    body {
+      background-image: radial-gradient(
+        circle at center,
+        rgba(217, 165, 32, 0.12) 0%,
+        rgba(217, 165, 32, 0.06) 30%,
+        rgba(217, 165, 32, 0.02) 70%,
+        black 100%
+      );
+    }
+  </style>
+
+  <body class="bg-black">
+    <header class="relative">
+      <!-- Container principal do header -->
+      <div class="flex md:justify-around justify-between items-center p-3 md:gap-28 bg-black w-full h-18">
+        <!-- Logo -->
+        <div class="flex gap-4 justify-center items-center md:w-auto">
+          <i class="fas fa-balance-scale text-[#d9a520] text-2xl"></i>
+          <p class="text-amber-50 font-serif text-lg">Silva e Associados</p>
+        </div>
+
+        <!-- Menu Desktop -->
+        <nav class="hidden md:block">
+          <ul class="text-gray-500 flex gap-9">
+            <li class="hover:text-white hover:transition hover:duration-300">
+              Início
+            </li>
+            <li class="hover:text-white hover:transition hover:duration-300">
+              Sobre
+            </li>
+            <li class="hover:text-white hover:transition hover:duration-300">
+              Serviços
+            </li>
+            <li class="hover:text-white hover:transition hover:duration-300">
+              Contatos
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Botão Desktop -->
+        <div class="hidden md:block">
+          <button class="bg-[#d9a520] p-2 rounded-lg hover:shadow-[0_0_80px_20px_rgba(217,165,32,0.3)] hover:transition hover:duration-500 text-black">
+            Consulta Gratuita
+          </button>
+        </div>
+
+        <!-- Botão Hambúrguer Mobile -->
+        <button id="menu-btn" class="md:hidden focus:outline-none">
+          <i class="fas fa-bars text-white text-2xl"></i>
+        </button>
+      </div>
+
+      <!-- Dropdown Mobile (FORA do container flex) -->
+      <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-black z-50 hidden">
+        <div class="flex flex-col space-y-3 py-4 px-6 border-t border-gray-700">
+          <a href="#" class="text-white hover:text-[#d9a520] transition py-2">Início</a>
+          <a href="#" class="text-white hover:text-[#d9a520] transition py-2">Sobre</a>
+          <a href="#" class="text-white hover:text-[#d9a520] transition py-2">Serviços</a>
+          <a href="#" class="text-white hover:text-[#d9a520] transition py-2">Contato</a>
+          <button class="bg-[#d9a520] hover:bg-yellow-600 text-black font-semibold px-4 py-3 rounded transition w-full">
+            Consulta Grátis
+          </button>
+        </div>
+      </div>
+      
+      <hr class="md:border-white md:opacity-100 hidden md:block" />
+    </header>
+
+    <script src="script.js"></script>
+  </body>
 </html>
