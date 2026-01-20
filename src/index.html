@@ -22,20 +22,25 @@
         black 100%
       );
     }
+
+
+    html, body {
+     overflow-x: hidden;
+    }
   </style>
 
   <body class="bg-black">
     <header class="relative">
       <!-- Container principal do header -->
-      <div class="flex md:justify-around justify-between items-center p-3 md:gap-28 bg-black w-full h-18">
+      <div class="flex lg:justify-around justify-between items-center p-3 lg:gap-28 bg-black w-full h-18">
         <!-- Logo -->
-        <div class="flex gap-4 justify-center items-center md:w-auto">
+        <div class="flex gap-4 justify-center items-center lg:w-auto">
           <i class="fas fa-balance-scale text-[#d9a520] text-2xl"></i>
           <p class="text-amber-50 font-serif text-lg">Silva e Associados</p>
         </div>
 
         <!-- Menu Desktop -->
-        <nav class="hidden md:block">
+        <nav class="hidden lg:block">
           <ul class="text-gray-500 flex gap-9">
             <li class="hover:text-white hover:transition hover:duration-300">
               Início
@@ -53,20 +58,20 @@
         </nav>
 
         <!-- Botão Desktop -->
-        <div class="hidden md:block">
+        <div class="hidden lg:block">
           <button class="bg-[#d9a520] p-2 rounded-lg hover:shadow-[0_0_80px_20px_rgba(217,165,32,0.3)] hover:transition hover:duration-500 text-black">
             Consulta Gratuita
           </button>
         </div>
 
         <!-- Botão Hambúrguer Mobile -->
-        <button id="menu-btn" class="md:hidden focus:outline-none">
+        <button id="menu-btn" class="lg:hidden focus:outline-none">
           <i class="fas fa-bars text-white text-2xl"></i>
         </button>
       </div>
 
       <!-- Dropdown Mobile (FORA do container flex) -->
-      <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-black z-50 hidden">
+      <div id="mobile-menu" class="lg:hidden absolute top-full left-0 w-full bg-black z-50 hidden">
         <div class="flex flex-col space-y-3 py-4 px-6 border-t border-gray-700">
           <a href="#" class="text-white hover:text-[#d9a520] transition py-2">Início</a>
           <a href="#" class="text-white hover:text-[#d9a520] transition py-2">Sobre</a>
@@ -78,8 +83,80 @@
         </div>
       </div>
       
-      <hr class="md:border-white md:opacity-100 hidden md:block" />
+      <hr class="lg:border-white lg:opacity-100 hidden lg:block" />
     </header>
+
+    <div class="bg-amber-200/20 lg:flex gap-3 border border-amber-500 w-fit py-2 px-3 mx-auto rounded-3xl items-center shadow-[0_0_1000px_20px_rgba(217,165,32,0.3)] lg:mt-8 flex mt-8">
+      <i class="fas fa-balance-scale text-sm text-[#d9a520]"></i>
+      <p class="text-[#d9a520] text-sm">Advocacia de Exelência</p>
+    </div>
+
+    <section>
+      <!--  Título Principal-->
+      <div class="grid grid-cols-1 lg:gap-4">
+        <h1 class="text-white lg:text-6xl text-5xl text-center font-serif font-bold mt-15">
+          Defendemos seus <span class="text-[#d9a520]">direitos</span> <br />
+        </h1>
+
+        <p class="text-white lg:text-6xl text-5xl text-center font-serif font-bold">
+          com dedicação
+        </p>
+
+        <!-- Subtítulo-->
+        <p class="text-center mt-6 lg:mt-3 text-lg lg:text-xl text-gray-400">
+          Mais de 20 anos de experiência 
+          <br class="block lg:hidden"> 
+          protegendo os interesses de nossos <br class="hidden lg:block">
+          <br class="block lg:hidden"> 
+          clientes. Consultoria jurídica personalizada 
+          <br class="block lg:hidden">
+          e resultados comprovados.
+        </p>
+      </div>
+
+      <!-- Botões Principais -->
+      <div class=" lg:flex justify-center items-center lg:gap-8 mt-10 grid grid-col-1 gap-3">
+        <button class="bg-[#d9a520] border border-[#d9a520] lg:w-60 w-80 py-3 rounded-sm hover:shadow-sm
+        hover:shadow-amber-300 hover:transform
+        hover:duration-400
+        ">Agende a Consulta <i class="fas fa-arrow-right text-black text-sm ml-4"></i></button> 
+        <button class="text-[#d9a520] border border-[#d9a520] lg:w-60 w-80 py-3 rounded-sm hover:bg-[#d9a520]/20 hover:transform
+        hover:duration-400
+        "> Conheça Nossa Equipe</button>
+      </div>
+
+      <hr class="mt-15 w-4xl mx-auto text-gray-400/20">
+
+      <!-- Dados casos, taxas e Anos-->
+      <div class="lg:flex lg:mx-80 lg:justify-around lg:items-center lg:gap-20 flex flex-row mt-10 md:justify-around md:items-center">
+        <div>
+          <h2 class="text-[#d9a520] lg:text-4xl text-2xl text-center font-bold">500+</h2>
+          <p class="text-gray-400 text-center">Casos Resolvidos</p>
+        </div>
+        
+        <div>
+          <h2 class="text-[#d9a520] lg:text-4xl text-2xl text-center font-bold">98%</h2>
+          <p class="text-gray-400 text-center">Taxa de Sucesso</p>
+        </div>
+
+        <div>
+          <h2 class="text-[#d9a520] lg:text-4xl text-2xl text-center font-bold">20+</h2>
+          <p class="text-gray-400 text-center">Anos de Experiência</p>
+        </div>
+      </div>
+
+      <p class="text-[#d9a520] text-center mt-35 text-lg">Área de atuação</p>
+      <h1 class="text-white lg:text-4xl text-3xl text-center font-serif font-bold mt-6">Expertise em <br class="lg:hidden block md:hidden"> diversas <span class="text-[#d9a520]">áreas do </span><br class=" md:hidden"> <span class="text-[#d9a520]">direito</span></h1>
+      <p class="text-gray-400 text-center mt-5">Nossa equipe multidisciplinar está 
+      <br class="lg:hidden block md:hidden"> preparada para atender às suas 
+      <br class="lg:hidden block md:hidden"> necessidades jurídicas <br class="hidden lg:block md:block"> com excelência e 
+      <br class="lg:hidden block md:hidden"> comprometimento.</p>
+    </section>
+
+    <!-- Blocos dinâmicos -->
+     <section class="mt-12 lg:mt-20 px-4 lg:px-10 flex">
+      <div id="blocos" class="lg:grid-cols-3 lg:grid lg:gap-5 grid grid-cols-1 gap-3 mx-auto md:grid md:grid-cols-1"></div>
+     </section>
 
     <script src="script.js"></script>
   </body>
