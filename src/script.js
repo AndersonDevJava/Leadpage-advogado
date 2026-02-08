@@ -51,7 +51,7 @@ menuBtn.addEventListener('click', () => {
     const div = document.createElement("div")
 
     div.className = 
-    "p-4 lg:w-md lg:h-60 w-80 h-60 rounded-lg bg-gray-400/5 lg:grid lg:grid-cols-1 hover:border-amber-500/50 hover:border lg:hover:shadow-[0_0_100px_20px_rgba(217,165,32,0.3)] lg:hover:trasition hover:duration-700 grid grid-cols-1 md:w-2xl"
+    "p-4 lg:w-md lg:h-60 w-80 h-60 rounded-lg bg-gray-400/5 lg:grid lg:grid-cols-1 hover:border-amber-500/50 hover:border lg:hover:shadow-[0_0_100px_20px_rgba(217,165,32,0.3)] lg:hover:trasition hover:duration-700 grid grid-cols-1 md:w-2xl 2xl:border 2xl:border-white"
 
     div.innerHTML = `
     <div class="bg-amber-200/20 lg:flex ml-3 w-fit h-fit lg:p-3 p-5 rounded-lg hover:shadow-2xs w-">

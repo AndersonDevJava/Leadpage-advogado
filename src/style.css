@@ -1,0 +1,146 @@
+body {
+  background-image: radial-gradient(
+    circle at center,
+    rgba(217, 165, 32, 0.12) 0%,
+    rgba(217, 165, 32, 0.06) 30%,
+    rgba(217, 165, 32, 0.02) 70%,
+    black 100%
+  );
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+/* ===== Reset básico ===== */
+* {
+  box-sizing: border-box;
+}
+
+/* Reset essencial do form */
+form {
+  padding: 5%;
+  font-size: 0.875rem;
+  box-sizing: border-box;
+}
+
+form * {
+  box-sizing: border-box;
+}
+
+/* Labels */
+label {
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Inputs, select e textarea (base) */
+input,
+select,
+textarea {
+  width: 100%;
+  max-width: 600px;
+  background-color: #060606;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  border-radius: 0.3em;
+  padding: 0.6em;
+  color: #fff;
+  margin-top: 0.4em;
+}
+
+/* Placeholder */
+input::placeholder,
+textarea::placeholder {
+  color: #8b8b8b;
+}
+
+/* Campo 1: nome + telefone */
+#campo-1 {
+  display: flex;
+  gap: 1em;
+}
+
+#campo-1 div {
+  flex: 1;
+}
+
+/* Campos 2 */
+#campos-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+  margin-top: 1.5em;
+}
+
+/* Select */
+select {
+  background-color: rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+
+/* Mensagem */
+#mensagem {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* Botão */
+form button {
+  width: 100%;
+  background-color: #d9a520;
+  color: #000;
+  border: none;
+  border-radius: 0.4em;
+  padding: 0.9em;
+  margin-top: 1.5em;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+form button:hover {
+  opacity: 0.9;
+}
+
+/* Texto de aviso */
+form p {
+  color: #9ca3af;
+  font-size: 0.75rem;
+  margin-top: 0.6em;
+  text-align: center;
+}
+
+/* ========================= */
+/* RESPONSIVIDADE */
+/* ========================= */
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  #campo-1 {
+    flex-direction: column;
+  }
+
+  form {
+    padding: 6%;
+  }
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+  #campo-1 {
+    flex-direction: column;
+  }
+}
+
+/* Notebook */
+@media (min-width: 769px) and (max-width: 1024px) {
+  form {
+    padding: 4%;
+  }
+}
+
+/* Desktop grande */
+@media (min-width: 1025px) {
+  form {
+    padding: 3%;
+  }
+}

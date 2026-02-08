@@ -5,31 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="output.css" />
     <link rel="shortc ut icon" href="five.icon/five.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <title>Lead page Advogado</title>
   </head>
-
-  <style>
-    body {
-      background-image: radial-gradient(
-        circle at center,
-        rgba(217, 165, 32, 0.12) 0%,
-        rgba(217, 165, 32, 0.06) 30%,
-        rgba(217, 165, 32, 0.02) 70%,
-        black 100%
-      );
-    }
-
-    html, body {
-    overflow-x: hidden;
-    }
-  </style>
-
+  
   <body class="bg-black">
-    <header class="relative">
+    <header class="relative" id="topo">
       <!-- Container principal do header -->
       <div class="flex lg:justify-around justify-between items-center p-3 lg:gap-28 bg-black w-full h-18">
         <!-- Logo -->
@@ -41,18 +26,10 @@
         <!-- Menu Desktop -->
         <nav class="hidden lg:block text-sm">
           <ul class="text-gray-500 flex gap-9">
-            <li class="hover:text-white hover:transition hover:duration-300">
-              Início
-            </li>
-            <li class="hover:text-white hover:transition hover:duration-300">
-              Sobre
-            </li>
-            <li class="hover:text-white hover:transition hover:duration-300">
-              Serviços
-            </li>
-            <li class="hover:text-white hover:transition hover:duration-300">
-              Contatos
-            </li>
+            <li class="hover:text-white hover:transition hover:duration-300"> <a href="#topo">Início</a></li>
+            <li class="hover:text-white hover:transition hover:duration-300"> <a href="#topo">Sobre</a> </li>
+            <li class="hover:text-white hover:transition hover:duration-300"> <a href="#topo">Serviços</a> </li>
+            <li class="hover:text-white hover:transition hover:duration-300"> <a href="#contato">Contatos</a> </li>
           </ul>
         </nav>
 
@@ -73,16 +50,16 @@
       <div id="mobile-menu" class="lg:hidden absolute top-full left-0 w-full bg-black z-50 hidden">
 
         <div class="flex flex-col space-y-3 py-4 px-6 border-t border-gray-700">
-          <a href="#" class="text-white hover:text-[#d9a520] transition py-2"
+          <a href="#topo" class="text-white hover:text-[#d9a520] transition py-2"
             >Início</a
           >
-          <a href="#" class="text-white hover:text-[#d9a520] transition py-2"
+          <a href="#topo" class="text-white hover:text-[#d9a520] transition py-2"
             >Sobre</a
           >
-          <a href="#" class="text-white hover:text-[#d9a520] transition py-2"
+          <a href="#topo" class="text-white hover:text-[#d9a520] transition py-2"
             >Serviços</a
           >
-          <a href="#" class="text-white hover:text-[#d9a520] transition py-2"
+          <a href="#contato" class="text-white hover:text-[#d9a520] transition py-2"
             >Contato</a
           >
           <button
@@ -317,8 +294,91 @@
       </section>
     </div>
 
-    <div class="bg-gradient-to-r from-black/20 via-amber-100/10 to-gray-400/10 border border-gray-400/20 rounded-2xl w-full lg:w-[40%] h-auto mt-10 lg:mt-20 min-h-[300px] lg:min-h-[400px]">
-      <!-- Formulário ou conteúdo adicional -->
+    <div id="contato" class="bg-gradient-to-r from-black/20 via-amber-100/10 to-gray-400/10 border border-gray-400/20 rounded-2xl w-full lg:w-[40%] h-auto mt-10 lg:mt-20 min-h-75 lg:min-h-100
+    box-border
+    ">
+      <form>
+      <section>
+        <div id="campo-1">
+          <!--Campo nome-->
+          <div>
+            <label for="name">Nome</label> <br />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Seu nome completo"
+              autocomplete="name"
+              required
+            />
+          </div>
+          <!--Campo telefone-->
+          <div>
+            <label for="telefone">Telefone</label> <br />
+            <input
+              type="number"
+              id="telefone"
+              name="telefone"
+              placeholder="(00) 00000-0000"
+              pattern="\(\d{2}\)\s\d{5}-\d{4}"
+              autocomplete="tel"
+              required
+            />
+          </div>
+        </div>
+
+        <!--Campos email área de Interesse e Mensagem-->
+        <div id="campos-2">
+          <!--Cmapo Email-->
+          <div>
+            <label for="email">E-mail</label> <br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="seu@email.com"
+              minlength="3"
+              autocomplete="email"
+              required
+            />
+          </div>
+
+          <!--Place holder de opções-->
+          <div>
+            <label for="area">Área de interesse</label><br />
+            <select id="area" name="area" required>
+              <option value="" disable selected hidden>
+                Selecione uma área
+              </option>
+              <option value="empresarial">Direito Empresarial</option>
+              <option value="familia">Direito de Família</option>
+              <option value="imobiliario">Direito Imobiliário</option>
+              <option value="civil">Direito Civil</option>
+              <option value="consumidor">Direito do Consumidor</option>
+              <option value="trabalhista">Direito Trabalhista</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+
+          <!--Campo Mensagem-->
+          <div class="mensagem-div">
+            <label for="mensagem">Mensagem</label> <br />
+            <textarea
+              name="mensagem"
+              id="mensagem"
+              placeholder="Descreva brevemente seu caso..."
+              required
+            ></textarea>
+          </div>
+          <button>
+          Enviar Mensagem
+          <i class="fa-solid fa-arrow-up" style="transform: rotate(45deg)"></i>
+        </button>
+        <p id="text-politicas">Ao enviar, você concorda com nossa política de privacidade.</p>
+        </div>
+        
+      </section>
+    </form>
     </div>
   </div>
 </section>
@@ -333,18 +393,10 @@
     
     <nav class="w-full lg:w-auto justify-center items-center flex">
       <ul class="text-gray-500 flex lg:flex-row gap-4 lg:gap-9 text-center lg:text-left">
-        <li class="hover:text-white hover:transition hover:duration-300 cursor-pointer">
-          Início
-        </li>
-        <li class="hover:text-white hover:transition hover:duration-300 cursor-pointer">
-          Sobre
-        </li>
-        <li class="hover:text-white hover:transition hover:duration-300 cursor-pointer">
-          Serviços
-        </li>
-        <li class="hover:text-white hover:transition hover:duration-300 cursor-pointer">
-          Contatos
-        </li>
+        <li class="hover:text-white hover:transition hover:duration-300 cursor-pointer"> <a href="#topo">Início</a> </li>
+        <li class="hover:text-white hover:transition hover:duration-300 cursor-pointer"> <a href="#topo">Sobre</a> </li>
+        <li class="hover:text-white hover:transition hover:duration-300 cursor-pointer"> <a href="#topo">Serviços</a> </li>
+        <li class="hover:text-white hover:transition hover:duration-300 cursor-pointer"> <a href="#contato">Contatos</a> </li>
       </ul>
     </nav>
     
