@@ -25,10 +25,9 @@ const blocos = [
   },
 ]
 
-
 const menuBtn = document.getElementById('menu-btn')
 const mobileMenu = document.getElementById('mobile-menu')
-const menuIcon = menuBtn.querySelector('i')
+const menuIcon = document.querySelector('i')
 
 menuBtn.addEventListener('click', () => {
   // Alterna visibilidade do menu
