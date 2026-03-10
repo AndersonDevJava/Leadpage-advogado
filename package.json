@@ -12,6 +12,7 @@
   "dependencies": {
     "@prisma/client": "^7.4.2",
     "@tailwindcss/cli": "^4.1.18",
+    "express": "^5.2.1",
     "prisma": "^7.4.2",
     "tailwindcss": "^4.1.18"
   }
