@@ -10,10 +10,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@prisma/client": "^7.4.2",
+    "@prisma/client": "^5.22.0",
     "@tailwindcss/cli": "^4.1.18",
     "express": "^5.2.1",
-    "prisma": "^7.4.2",
+    "prisma": "^5.22.0",
     "tailwindcss": "^4.1.18"
   }
 }
