@@ -9,11 +9,6 @@ app.use(cors())
 
 app.use('/users', router)
 
-app.get('/', (req, res) => {
-  res.send('API rodando!');
-});
-
-
 const PORT = process.env.PORT || 3333;
 
 app.listen(PORT, () => {
