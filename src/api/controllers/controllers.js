@@ -12,7 +12,7 @@ export async function criarContatoContoller(req, res) {
       mensagem,
     })
 
-    return res.status(200).json({ menssage: 'Usuário criado com Sucesso!' })
+    return res.status(200).json({ menssage: 'Usuário criado com Sucesso!', contato})
   } catch (error) {
     console.error(error)
     if (error.code === 'P2002') {
