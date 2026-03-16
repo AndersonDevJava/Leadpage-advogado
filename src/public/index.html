@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="output.css" />
-    <link rel="shortc ut icon" href="five.icon/five.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="five.icon/five.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css">
     <link
       rel="stylesheet"
@@ -297,7 +297,7 @@
     <div id="contato" class="bg-gradient-to-r from-black/20 via-amber-100/10 to-gray-400/10 border border-gray-400/20 rounded-2xl w-full lg:w-[40%] h-auto mt-10 lg:mt-20 min-h-75 lg:min-h-100
     box-border
     ">
-      <form>
+      <form id="form-leads">
       <section>
         <div id="campo-1">
           <!--Campo nome-->
@@ -316,7 +316,7 @@
           <div>
             <label for="tel">Telefone</label> <br />
             <input
-              type="number"
+              type="text"
               id="telefone"
               name="telefone"
               placeholder="(00) 00000-0000"
@@ -370,7 +370,7 @@
               required
             ></textarea>
           </div>
-          <button>
+          <button type="submit">
           Enviar Mensagem
           <i class="fa-solid fa-arrow-up" style="transform: rotate(45deg)"></i>
         </button>
@@ -411,6 +411,6 @@
     OAB/SP 123.456 | CNPJ: 00.000.000/0001-00
   </p>
 </footer>
-    <script src="script.js"></script>
+    <script src="../conectionAPI.js"></script>
   </body>
 </html>

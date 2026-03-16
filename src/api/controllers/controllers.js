@@ -12,13 +12,14 @@ export async function criarContatoContoller(req, res) {
       mensagem,
     })
 
-    res.status(200).json({ menssage: 'Usuário criado com Sucesso!', contato })
+    return res.status(200).json({ menssage: 'Usuário criado com Sucesso!' })
   } catch (error) {
+    console.error(error)
     if (error.code === 'P2002') {
       return res
         .status(400)
         .json({ menssage: 'Email ou telefone já estão cadastrados' })
     }
-    res.status(500).json({ erro: 'Erro ao salvar contato' })
+    return res.status(500).json({ erro: 'Erro ao salvar contato' })
   }
 }
