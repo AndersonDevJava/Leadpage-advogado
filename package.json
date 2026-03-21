@@ -1,21 +1,19 @@
 {
   "name": "leadpage-advogado",
   "version": "1.0.0",
-  "description": "",
-  "license": "ISC",
-  "author": "Anderson Full-Stack",
   "type": "module",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "dependencies": {
     "@prisma/client": "^5.22.0",
-    "@tailwindcss/cli": "^4.1.18",
     "cors": "^2.8.6",
-    "express": "^5.2.1",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
     "prisma": "^5.22.0",
+    "@tailwindcss/cli": "^4.1.18",
     "tailwindcss": "^4.1.18"
   }
 }

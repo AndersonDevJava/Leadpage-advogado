@@ -25,7 +25,7 @@ form.addEventListener("submit", async (e) => {
     }
 
     try {
-        const response = await fetch("https://leadpage-advogado.onrender.com/users", {
+        const response = await fetch("http://localhost:3333/users", {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
