@@ -22,8 +22,8 @@ export function validarCreateUser(req, res, next) {
       return res.status(400).json({
         message:
           tamanhoName < 2
-            ? `Nome muito curto (${tamanho}). Mínimo 3 caracteres.`
-            : `Nome muito longo (${tamanho}). Máximo 100 caracteres.`,
+            ? `Nome muito curto (${tamanhoName}). Mínimo 3 caracteres.`
+            : `Nome muito longo (${tamanhoName}). Máximo 100 caracteres.`,
       })
     }
   }
