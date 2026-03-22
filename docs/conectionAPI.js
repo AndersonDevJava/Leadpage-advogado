@@ -17,7 +17,7 @@ form.addEventListener("submit", async (e) => {
     }
 
     const data = {
-        nome: document.getElementById("name").value,
+        nome: document.getElementById("nome").value,
         email: document.getElementById("email").value,
         telefone: document.getElementById("telefone").value,
         area: areaMap[document.getElementById("area").value],
