@@ -33,7 +33,7 @@ export function validarCreateUser(req, res, next) {
   }
 
   if (!regexEmail(email)) {
-    return res.status(400).json({ message: 'Email inválido Formato: (DDD) seuemail@gmail.com' })
+    return res.status(400).json({ message: 'Email inválido Formato: seuemail@gmail.com' })
   }
 
   next()
