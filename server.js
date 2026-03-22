@@ -1,7 +1,7 @@
 import express from 'express'
 import { router } from './src/api/routes/router.js'
 import cors from 'cors'
-import { prisma } from './src/lib/conectionDataBase.js'
+import { prisma } from './src/api/lib/conectionDataBase.js'
 
 const app = express()
 
