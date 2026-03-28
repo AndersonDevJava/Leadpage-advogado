@@ -1,9 +1,5 @@
-function Login(){
-    return (
-        <div className="bg-yellow-500">
-  Teste
-</div>
-    );
+function Login() {
+  return <div className="bg-green-200 h-screen">Funcionando</div>
 }
 
 export default Login
