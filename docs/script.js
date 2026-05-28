@@ -28,6 +28,31 @@ const blocos = [
 const menuBtn = document.getElementById('menu-btn')
 const mobileMenu = document.getElementById('mobile-menu')
 const menuIcon = document.querySelector('i')
+const btnform = document.getElementById('btn-form')
+
+btnform.addEventListener("click", () => {
+
+  const nome = document.getElementById('nome').value
+  const interesse = document.getElementById('interesse').value
+  const descricao = document.getElementById('descricao').value
+
+  const mensagem = `
+Olá, me chamo ${nome}
+
+Área de interesse:
+${interesse}
+
+Descrição:
+${descricao}
+  `
+
+  const numero = '5583986306588'
+
+  window.open(
+    `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`,
+    '_blank'
+  )
+})
 
 menuBtn.addEventListener('click', () => {
   // Alterna visibilidade do menu

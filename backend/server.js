@@ -1,13 +1,12 @@
 import express from 'express'
-import { router } from './src/api/routes/router.js'
 import cors from 'cors'
+import { router } from './src/api/routes/router.js'
 import { prisma } from './src/api/lib/conectionDataBase.js'
 
 const app = express()
 
 app.use(express.json())
 app.use(cors())
-
 app.use('/users', router)
 
 app.get('/test-db', async (req, res) => {
