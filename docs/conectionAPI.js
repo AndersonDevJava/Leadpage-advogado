@@ -25,7 +25,7 @@ form.addEventListener("submit", async (e) => {
     }
 
     try {
-        const response = await fetch("https://leadpage-advogado-1.onrender.com/users", {
+        const response = await fetch("https://leadpage-advogado.onrender.com/users", {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -40,7 +40,7 @@ form.addEventListener("submit", async (e) => {
             alert("Mensagem enviada com sucesso!")
             form.reset()
         } else {
-            alert(result.menssage)
+            alert(result.message)
         }
 
     } catch (error) {
