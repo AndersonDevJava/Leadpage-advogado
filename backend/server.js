@@ -8,7 +8,7 @@ const app = express()
 app.use(express.json())
 
 app.use(cors({
-  origin: 'https://andersondevjava.github.io/Leadpage-advogado/',
+  origin: ['http://127.0.0.1:5500', 'https://andersondevjava.github.io/Leadpage-advogado/'],
   optionsSuccessStatus: 200
 }))
 
