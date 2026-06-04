@@ -6,7 +6,12 @@ import { prisma } from './src/api/lib/conectionDataBase.js'
 const app = express()
 
 app.use(express.json())
-app.use(cors())
+
+app.use(cors({
+  origin: 'https://andersondevjava.github.io/Leadpage-advogado/',
+  optionsSuccessStatus: 200
+}))
+
 app.use('/users', router)
 
 app.get('/test-db', async (req, res) => {
