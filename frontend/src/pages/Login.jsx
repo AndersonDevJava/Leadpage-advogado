@@ -29,7 +29,7 @@ function Login() {
       return
     }
 
-    mensagemError("Dados validado com Sucesso!")
+    mensagemError("✅ Dados validado com Sucesso!")
     setType('sucesso')
   }
 
@@ -53,16 +53,6 @@ function Login() {
             className="w-72 h-10 px-3 bg-white/20 border border-white/20 rounded-md placeholder-white text-white cursor-pointer"
           />
 
-          {mensagem && (
-            <p 
-            className={`text-md text-center w-60 rounded-md ${
-              type === 'error' ? 'text-red-500 font-semibold bg-red-300' : 'text-white font-semibold bg-green-600'
-            }`}
-            >
-            {mensagem}
-            </p>
-          )}
-
           <input
             type="password"
             value={senha}
@@ -71,6 +61,16 @@ function Login() {
             required
             className="w-72 h-10 px-3 bg-white/20 border border-white/20 rounded-md placeholder-white text-white cursor-pointer"
           />
+
+          {mensagem && (
+            <p 
+            className={`text-md text-center w-60 rounded-md ${
+              type === 'error' ? 'text-red-300' : 'text-green-300'
+            }`}
+            >
+            {mensagem}
+            </p>
+          )}
 
           <button
             type="submit"

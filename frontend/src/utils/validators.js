@@ -16,7 +16,7 @@ export function validatorLogin(email, senha) {
   }
 
   if (!senha || senha.length < 6) {
-    return 'A senha deve ter 6 digitos'
+    return '⚠️ A senha deve ter 6 digitos'
   }
 
   return true
